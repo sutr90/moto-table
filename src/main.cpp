@@ -3,13 +3,13 @@
 
 bool run = false;
 
-OneButton btnUp = OneButton(7);
-OneButton btnDown = OneButton(8);
+OneButton btnUp = OneButton(10);
+OneButton btnDown = OneButton(11);
 
 const int STEP_DELAY_US = 60;
 
 const int ENABLE_PIN = 4;
-const int STEP_PIN = 13;
+const int STEP_PIN = 5;
 const int LDIR_PIN = 3;
 const int RDIR_PIN = 2;
 
