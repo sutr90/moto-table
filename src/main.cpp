@@ -9,7 +9,7 @@ OneButton btnDown = OneButton(11);
 const int STEP_DELAY_US = 60;
 
 const int ENABLE_PIN = 4;
-const int STEP_PIN = 5;
+const int STEP_PIN = 9;
 const int LDIR_PIN = 3;
 const int RDIR_PIN = 2;
 
@@ -50,22 +50,22 @@ void setup()
   pinMode(LDIR_PIN, OUTPUT);
   pinMode(RDIR_PIN, OUTPUT);
 
-  btnUp.attachLongPressStart([]()
+  btnUp.attachDoubleClick([]()
                              {
                                clockwise();
                                run = true;
                              });
 
-  btnDown.attachLongPressStart([]()
+  btnDown.attachDoubleClick([]()
                                {
                                  counterclock();
                                  run = true;
                                });
 
-  btnUp.attachLongPressStop([]()
+  btnUp.attachClick([]()
                             { run = false; });
 
-  btnDown.attachLongPressStop([]()
+  btnDown.attachClick([]()
                               { run = false; });
 }
 void loop()
